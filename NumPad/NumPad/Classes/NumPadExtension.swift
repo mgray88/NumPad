@@ -15,7 +15,11 @@ extension NumPad {
         self.overlayView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.overlayView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.overlayView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        self.overlayView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        if #available(iOS 11, *) {
+            self.overlayView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        } else {
+            self.overlayView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        }
 
         self.overlayView.addSubview(self.innerView)
         self.innerView.topAnchor.constraint(equalTo: self.overlayView.topAnchor).isActive = true
