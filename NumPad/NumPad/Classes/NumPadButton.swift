@@ -61,7 +61,7 @@ extension NumPad {
                 buttonTitle.setAttributes([ .font: style.phoneFont ], range: NSRange(location: 0, length: 1))
             }
             
-            self.setAttributedTitle(buttonTitle, for: UIControlState())
+            self.setAttributedTitle(buttonTitle, for: UIControl.State())
             
             self.addTarget(self, action: #selector(self.buttonDown), for: .touchDown)
             self.addTarget(self, action: #selector(self.buttonUp), for: .touchUpInside)
@@ -115,9 +115,9 @@ extension NumPad {
             self.titleLabel?.font = style.font
             self.titleLabel?.textAlignment = .center
             switch type {
-            case .decimal: self.setTitle(NumPad.decimalChar, for: UIControlState())
-            case .phone: self.setTitle("+", for: UIControlState())
-            default: self.setTitle("", for: UIControlState())
+            case .decimal: self.setTitle(NumPad.decimalChar, for: UIControl.State())
+            case .phone: self.setTitle("+", for: UIControl.State())
+            default: self.setTitle("", for: UIControl.State())
             }
             self.isEnabled = type == .number ? false : true
             self.handler = handler
@@ -143,7 +143,7 @@ extension NumPad {
         public init(style: NumPad.Style = NumPad.Style.default, handler: ((Int) -> Void)? = nil) {
             super.init(frame: .zero)
             self.translatesAutoresizingMaskIntoConstraints = false
-            self.setImage(UIImage(named: "Backspace", in: Bundle(for: NumPad.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: UIControlState())
+            self.setImage(UIImage(named: "Backspace", in: Bundle(for: NumPad.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: UIControl.State())
             self.showsTouchWhenHighlighted = true
             self.style = style
             self.tag = 11

@@ -8,7 +8,6 @@
 
 import UIKit
 import NumPad
-import CommonKit
 import PhoneNumberKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
