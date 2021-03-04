@@ -12,10 +12,9 @@ NumPad and DoneBar inputview helpers. Compatible with both, iPhone and iPad.
   s.author           = { 'Oskari Rauta' => 'oskari.rauta@gmail.com' }
   s.source           = { :git => 'https://github.com/oskarirauta/NumPad.git', :tag => s.version.to_s }
 
-  s.swift_version = '4.0' 
-  s.ios.deployment_target = '11.0'
+  s.swift_version = '5.0' 
+  s.ios.deployment_target = '10.0'
   s.source_files = 'NumPad/NumPad/Types/*.swift', 'NumPad/NumPad/Extensions/*.swift', 'NumPad/NumPad/Classes/*.swift'
   s.resources = [ 'NumPad/NumPad/Resources/NumPad.xcassets' ]
-  s.dependency 'CommonKit'
  
 end
