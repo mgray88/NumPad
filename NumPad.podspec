@@ -16,6 +16,6 @@ NumPad and DoneBar inputview helpers. Compatible with both, iPhone and iPad.
   s.swift_version = '5.0' 
   s.ios.deployment_target = '10.0'
   s.source_files = 'NumPad/NumPad/Types/*.swift', 'NumPad/NumPad/Extensions/*.swift', 'NumPad/NumPad/Classes/*.swift'
-  s.resources = [ 'NumPad/NumPad/Resources/NumPad.xcassets' ]
+  s.resource_bundle = { 'NumPad' => 'NumPad/NumPad/Resources/NumPad.xcassets/**/*.png' }
  
 end
