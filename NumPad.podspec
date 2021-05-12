@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NumPad'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.license          = { :type => 'Free', :text => 'Free' }
   s.summary          = 'NumPad keyboard framework for iOS. For both, iPhone and iPad. Swift 5.0'
  
